@@ -19,7 +19,7 @@ func NewMysqlDatabase() *MysqlSession {
 
 func (m *MysqlSession) Initialize() *MysqlSession {
 	var err error
-	m.Db, err = sql.Open("mysql", "root:triadpass@/ekuator_test")
+	m.Db, err = sql.Open("mysql", "user:password@/ekuator_test")
 	if err != nil {
 		log.Printf("Unable to Connect DB to %v", err)
 		return nil
